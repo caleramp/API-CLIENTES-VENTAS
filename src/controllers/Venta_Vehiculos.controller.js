@@ -289,7 +289,7 @@ export const deletecliente = async ( request, result ) => {
 
 }
 
-//Borrado logico son todos lo que estan estado 0
+//Borrado logico son todos lo que estan estado 0 y lo debo de hacer con el ID que es unico para cada cliente
 export const deletelogico= async ( request, result ) => {
 
     try {
