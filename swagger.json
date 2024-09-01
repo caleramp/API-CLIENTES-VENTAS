@@ -1,0 +1,131 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "proyecto_node",
+      "description": "API con funcionalidad CRUD para los Alumnos"
+    },
+    "host": "localhost:3002",
+    "basePath": "/",
+    "schemes": ["http"],
+    "paths": {
+      "/api/Venta_Vehiculo/VentaInsertar": {
+        "post": {
+          "summary": "Insertar un alumno",
+          "description": "Insertar un nuevo alumno",
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "description": "Ingresa los datos solicitados",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "nombre": {
+                    "type": "string"
+                  },
+                  "apellidos": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "nombre": "Oscar",
+                  "apellidos": "Molina"
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Resultado",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "respuesta_tipo": {
+                    "type": "string"
+                  },
+                  "respuesta_detalle": {
+                    "type": "string"
+                  },
+                  "datos": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/Venta_Vehiculo/getAll": {
+        "post": {
+          "summary": "Lista de todos los alumnos",
+          "description": "Devuelve un json con la lista de todos los alumnos",
+          "responses": {
+            "200": {
+              "description": "Resultado",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "respuesta_tipo": {
+                    "type": "string"
+                  },
+                  "respuesta_detalle": {
+                    "type": "string"
+                  },
+                  "datos": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/Venta_Vehiculo/getById/": {
+        "post": {
+          "summary": "Alumno por id",
+          "description": "Filtra por medio de un id para encontrar los datos de un alumno",
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "description": "Ingresa el dato solicitado",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  }
+                },
+                "example": {
+                  "id": 1
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Resultado",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "respuesta_tipo": {
+                    "type": "string"
+                  },
+                  "respuesta_detalle": {
+                    "type": "string"
+                  },
+                  "datos": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
